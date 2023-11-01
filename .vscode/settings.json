@@ -1,3 +1,7 @@
 {
-  "cSpell.ignoreWords": ["venv"]
+  "cSpell.ignoreWords": ["restapi", "venv"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
 }
