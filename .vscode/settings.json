@@ -1,5 +1,5 @@
 {
-  "cSpell.ignoreWords": ["restapi", "venv"],
+  "cSpell.ignoreWords": ["asgi", "dotenv", "restapi", "venv"],
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
