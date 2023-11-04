@@ -16,7 +16,7 @@ def GetAllPosts(request):
     get_posts = Post.objects.all()
     serializer = PostSerializer(get_posts, many=True)
 
-    return Response(serializer.data)
+    return Response(serializer.data, status=200)
 
 
 @api_view(['GET', 'POST'])
