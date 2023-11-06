@@ -31,10 +31,10 @@ def CreatePost(request):
 
 
 @api_view(['DELETE'])
-def DeletePost(request):
+def DeletePost(request, id):
     post_id = request.data.get('post_id')
     try:
-        post = Post.objects.get(id=post_id)
+        post = Post.objects.get(id=id)
         post.delete()
         return Response({"Success": "The post was successfully deleted"}, status=200)
     except Post.DoesNotExist:
@@ -42,10 +42,9 @@ def DeletePost(request):
 
 
 @api_view(['GET'])
-def GetPost(request):
-    post_id = request.data.get('post_id')
+def GetPost(request, id):
     try:
-        post = Post.objects.get(id=post_id)
+        post = Post.objects.get(id=id)
         serializer = PostSerializer(post)
         return Response(serializer.data)
     except Post.DoesNotExist:
