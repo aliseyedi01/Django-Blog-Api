@@ -19,7 +19,7 @@ def GetAllPosts(request):
     return Response(serializer.data, status=200)
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def CreatePost(request):
     data = request.data
     serializer = PostSerializer(data=data)
